@@ -1,0 +1,50 @@
+[Helper Apps]
+
+# Path to the comskip binary.
+comskip-path: /usr/local/bin/comskip
+
+# Path to the comskip INI file. Defaults to the same directory as the PlexComskip script.
+# comskip-ini-path: ~/comskip.ini
+
+# Path to the ffmpeg binary.
+ffmpeg-path: /usr/bin/ffmpeg
+
+# Path to filebot binary
+filebot-path: /usr/bin/filebot
+
+# Nice level. Used for file copies, comskip analysis, and ffmpeg processing. 0 (default, full priority) - 20 (most nice)
+nice-level: 0
+
+[Logging]
+
+# Log file location.
+logfile-path: /var/log/plex_post/plex_post.log
+daemon-logfile-path: /var/log/plex_post/plex_post-daemon.log
+
+
+# Split the log output to the console? Useful for debugging.
+console-logging: True
+
+[File Manipulation]
+
+# Specify a temp directory for interstitial files. This should be local, fast, and have enough free space for ~2x your largest video. Defaults to system temp location.
+temp-root: /mnt/siren/Stage/intersitial
+
+# Should we copy the original file to the temp directory? Useful if disk access to the original is slower than your temp location. Defaults to False.
+copy-original: False
+
+# Always save the intermediate files? Useful for debugging. Defaults to False.
+save-always: False
+
+# Save intermediate files when something goes wrong? Also useful for debugging and less space intensive. Defaults to True.
+save-forensics: True
+
+[Output]
+
+output-path: /mnt/siren/Stage/tv
+season-output-path: /mnt/siren/Stage/tv
+movie-output-path: /mnt/siren/Stage/complete
+
+[Pushbullet]
+enabled: yes 
+api_key: enter your key here 
