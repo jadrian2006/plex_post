@@ -2,9 +2,9 @@ PLEX_POST
 
 Work In Progress:
 
-This was intended to extend ekim1337's PlexComskip plex post processing script to add additional functionality.
-Quick flow chart:
-https://github.com/jadrian2006/plex_post/blob/master/Plex_Post.jpg
+This was intended to extend ekim1337's PlexComskip plex post processing script to add additional functionality./n
+Quick flow chart:/n
+https://github.com/jadrian2006/plex_post/blob/master/Plex_Post.jpg/n
 
 It consists of 2 primary worker files:
 
