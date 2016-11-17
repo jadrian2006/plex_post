@@ -10,14 +10,14 @@ It consists of 2 primary worker files:
 
 1: plex_post.py 
    - this is the file that you place in your plex_dvr post processor
-     1: validates that the file passed to the plex_post is a valid video file
-     2: queue processing
+     * 1: validates that the file passed to the plex_post is a valid video file
+     * 2: queue processing
 	a: copies the file from .grab to your interstitial directory
 	this prevents plex from deleting the file once the plex_post file ends before ppc_daemon finishes
 	b: watches for lock file to ensure that our queue is idle
 	c: updates queue with new file name
 	d: sends pushbullet message that a file was added to the queue
-     3: Checks ppc_daemon status
+     * 3: Checks ppc_daemon status
         a: check if ppc_daemon_pid file has a pid
 	   i: has pid, checks to see if pid is running
 	      if pid is running, checks to see if it is the ppc_daemon.py
@@ -26,11 +26,11 @@ It consists of 2 primary worker files:
               pid is not running, launch ppc_daemon.py
 	   iii: does not have a pid
               launch ppc_daemon.py
-     4: exit plex_post
+     * 4: exit plex_post
 
 2: ppc_daemon.py
    - this is the actual worker for the plex_post processing
-     1: loads queue file, extracts first video file
+     * 1: loads queue file, extracts first video file
 	a: comskip processing
 	b: ffmpeg cut/merge processing
 	c: get resolution of the video and store it in its format (IE: 1080p, 480p, etc)
